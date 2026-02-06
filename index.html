@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Отряд Полумесяц</title>
+    <title>Отряд Шиногенкай/Мрак</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -1209,6 +1209,260 @@
                 font-size: 1.5em;
             }
         }
+
+        /* Фиолетовые карточки */
+.member-card.purple-card {
+    background: rgba(106, 13, 173, 0.15);
+    border: 1px solid rgba(106, 13, 173, 0.3);
+}
+
+.member-card.purple-card:hover {
+    background: rgba(106, 13, 173, 0.25);
+    border-color: rgba(106, 13, 173, 0.5);
+}
+
+.member-card.purple-card .member-avatar {
+    background: linear-gradient(45deg, #4b0082, #6a0dad, #9370db);
+    border-color: #9370db;
+}
+
+.member-card.purple-card .member-rank {
+    color: #c9a0ff;
+}
+
+.member-card.purple-card .member-name {
+    background: linear-gradient(45deg, #c9a0ff, #9370db, #6a0dad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.member-card.purple-card .member-role {
+    color: #c9a0ff;
+}
+
+/* Фиолетовые vacant карточки */
+.member-card.purple-card.vacant {
+    background: rgba(106, 13, 173, 0.08);
+    border: 2px dashed rgba(147, 112, 219, 0.4);
+}
+
+.member-card.purple-card.vacant:hover {
+    background: rgba(106, 13, 173, 0.12);
+    border-color: rgba(147, 112, 219, 0.6);
+    border-style: dashed;
+}
+
+.member-card.purple-card.vacant .member-avatar {
+    background: linear-gradient(45deg, #2d0040, #4b0082, #6a0dad);
+    border-color: rgba(147, 112, 219, 0.3);
+}
+
+.member-card.purple-card.vacant .member-name {
+    color: #9370db;
+    -webkit-text-fill-color: #9370db;
+    background: none;
+}
+
+/* Анимация пульсации для фиолетовых vacant карточек */
+.member-card.purple-card.vacant .member-avatar {
+    animation: purplePulse 4s infinite;
+}
+
+@keyframes purplePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(147, 112, 219, 0.4);
+        transform: scale(1);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(147, 112, 219, 0);
+        transform: scale(1.05);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(147, 112, 219, 0);
+        transform: scale(1);
+    }
+}
+
+/* Более яркий вариант фиолетовых карточек */
+.member-card.purple-card.vibrant {
+    background: rgba(106, 13, 173, 0.2);
+    border: 1px solid rgba(147, 112, 219, 0.5);
+    box-shadow: 0 5px 20px rgba(106, 13, 173, 0.3);
+}
+
+.member-card.purple-card.vibrant:hover {
+    background: rgba(106, 13, 173, 0.3);
+    border-color: #9370db;
+    box-shadow: 0 10px 30px rgba(106, 13, 173, 0.4);
+}
+
+.member-card.purple-card.vibrant .member-avatar {
+    background: linear-gradient(135deg, #4b0082 0%, #6a0dad 50%, #9370db 100%);
+    border-color: #c9a0ff;
+    box-shadow: 0 0 20px rgba(147, 112, 219, 0.5);
+}
+
+.member-card.purple-card.vibrant .member-avatar::after {
+    background: radial-gradient(circle, rgba(201, 160, 255, 0.4) 0%, rgba(147, 112, 219, 0) 70%);
+}
+
+.member-card.purple-card.vibrant .member-rank {
+    color: #d8bfd8;
+    font-weight: 700;
+}
+
+.member-card.purple-card.vibrant .member-name {
+    background: linear-gradient(45deg, #e6e6fa, #d8bfd8, #9370db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(147, 112, 219, 0.3);
+}
+
+.member-card.purple-card.vibrant .member-role {
+    color: #dda0dd;
+    font-weight: 600;
+}
+
+/* Фиолетовая vacant с vibrant стилем */
+.member-card.purple-card.vibrant.vacant {
+    background: rgba(106, 13, 173, 0.1);
+    border: 2px dashed rgba(147, 112, 219, 0.5);
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.2);
+}
+
+.member-card.purple-card.vibrant.vacant:hover {
+    background: rgba(106, 13, 173, 0.15);
+    border-color: rgba(201, 160, 255, 0.7);
+    box-shadow: 0 8px 25px rgba(106, 13, 173, 0.3);
+}
+
+.member-card.purple-card.vibrant.vacant .member-avatar {
+    background: linear-gradient(135deg, #2d0040 0%, #4b0082 50%, #6a0dad 100%);
+    border-color: rgba(147, 112, 219, 0.4);
+    box-shadow: 0 0 15px rgba(106, 13, 173, 0.4);
+}
+
+/* Фиолетовые навигационные элементы */
+.nav-item.purple-card {
+    background: rgba(106, 13, 173, 0.1);
+    border: 1px solid rgba(106, 13, 173, 0.2);
+}
+
+.nav-item.purple-card:hover {
+    background: rgba(106, 13, 173, 0.2);
+    border-color: rgba(106, 13, 173, 0.4);
+}
+
+.nav-item.purple-card .nav-icon {
+    color: #c9a0ff;
+}
+
+.nav-item.purple-card .nav-text {
+    color: #d8bfd8;
+}
+
+.nav-item.purple-card.active {
+    background: rgba(106, 13, 173, 0.25);
+    border-color: rgba(147, 112, 219, 0.5);
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.2);
+}
+
+/* Фиолетовые иконки для карточек Мрака */
+.feature-card.purple-card .feature-icon {
+    background: linear-gradient(135deg, #4b0082 0%, #6a0dad 50%, #9370db 100%);
+    border-color: #c9a0ff;
+    box-shadow: 0 0 20px rgba(147, 112, 219, 0.5);
+}
+
+.feature-card.purple-card .feature-icon::after {
+    background: radial-gradient(circle, rgba(201, 160, 255, 0.4) 0%, rgba(147, 112, 219, 0) 70%);
+}
+
+.feature-card.purple-card .feature-icon i {
+    color: #e6e6fa;
+}
+
+/* Фиолетовые карточки функций */
+.feature-card.purple-card {
+    background: rgba(106, 13, 173, 0.15);
+    border: 1px solid rgba(106, 13, 173, 0.3);
+}
+
+.feature-card.purple-card:hover {
+    background: rgba(106, 13, 173, 0.25);
+    border-color: rgba(106, 13, 173, 0.5);
+}
+
+.feature-card.purple-card h3 {
+    background: linear-gradient(45deg, #e6e6fa, #d8bfd8, #9370db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.feature-card.purple-card p {
+    color: #dda0dd;
+}
+
+.feature-card.purple-card .feature-button {
+    background: rgba(106, 13, 173, 0.2);
+    border-color: rgba(147, 112, 219, 0.4);
+    color: #e6e6fa;
+}
+
+.feature-card.purple-card .feature-button:hover {
+    background: rgba(106, 13, 173, 0.3);
+    border-color: #9370db;
+}
+
+/* Фиолетовые карточки рангов */
+.rank-card.purple-card {
+    background: rgba(106, 13, 173, 0.15);
+    border: 1px solid rgba(106, 13, 173, 0.3);
+}
+
+.rank-card.purple-card:hover {
+    background: rgba(106, 13, 173, 0.25);
+    border-color: rgba(106, 13, 173, 0.5);
+    transform: translateY(-10px);
+}
+
+.rank-card.purple-card .rank-icon {
+    background: linear-gradient(135deg, #4b0082 0%, #6a0dad 50%, #9370db 100%);
+    border-color: #c9a0ff;
+    box-shadow: 0 0 20px rgba(147, 112, 219, 0.5);
+}
+
+.rank-card.purple-card .rank-icon::after {
+    background: radial-gradient(circle, rgba(201, 160, 255, 0.4) 0%, rgba(147, 112, 219, 0) 70%);
+}
+
+.rank-card.purple-card .rank-icon i {
+    color: #e6e6fa;
+}
+
+.rank-card.purple-card .rank-title {
+    background: linear-gradient(45deg, #e6e6fa, #d8bfd8, #9370db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.rank-card.purple-card .rank-points {
+    color: #d8bfd8;
+    text-shadow: 0 0 15px rgba(147, 112, 219, 0.4);
+}
+
+.rank-card.purple-card .rank-cooldown {
+    color: #c9a0ff;
+    border-left: 3px solid #9370db;
+}
+
+.rank-card.purple-card p {
+    color: #dda0dd;
+}
     </style>
 </head>
 <body>
@@ -1233,7 +1487,14 @@
                 <div class="nav-icon">
                     <i class="fas fa-chart-line"></i>
                 </div>
-                <div class="nav-text">Система повышений</div>
+                <div class="nav-text">Шиногенкай</div>
+            </div>
+
+            <div class="nav-item purple-card" onclick="showSection('ranks2')">
+                <div class="nav-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="nav-text">Мрак</div>
             </div>
             
             <div class="nav-item" onclick="showSection('rules')">
@@ -1247,7 +1508,7 @@
                 <div class="nav-icon">
                     <i class="fas fa-users"></i>
                 </div>
-                <div class="nav-text">Состав Отряда</div>
+                <div class="nav-text">Состав Отрядов</div>
             </div>
 
             <div class="nav-item" onclick="showSection('events')">
@@ -1265,12 +1526,14 @@
             <!-- Главная страница -->
             <div id="main" class="section active">
                 <section class="hero">
-                    <h1>ОТРЯД ПОЛУМЕСЯЦ</h1>
-                    <p>Полумесяц - это карательный отряд, члены отряда занимаются пытками и допросом истребителей. Большинство членов отряда представляют собой бывших охотников на демонов, которые отринули человечность и обратились в демонов.</p>
-                    
+                    <h1>ОТРЯД ШИНОГЕНКАЙ / МРАК</h1>
+                    <p>Шиногенкай - отряд занимается разведкой и уничтожением цели, чье существование мешает Прародителю.</p>
+                    <p style="color: #9370db;">Мрак - отряд который занимается грабежами, пытками, и заказными убийствами, созданием и продажей наркотиков.</p>
+
+    
                     <div class="server-info" id="server-ip" onclick="copyServerIP()">
                         <i class="fas fa-server"></i>
-                        <span>s5.yufu.su:27017</span>
+                        <span>kasty.su:27027</span>
                     </div>
                 </section>
 
@@ -1279,9 +1542,20 @@
                         <div class="feature-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3>Система повышений</h3>
-                        <p>Узнайте все этапы карьерного роста в отряде. Каждое звание открывает новые возможности и ответственность.</p>
+                        <h3>Система повышения для Шиногенкая </h3>
+                        <p>Путь от слабого демона до мастера меча. Строгая иерархия, основанная на клятве крови, дисциплине и техническом совершенстве владения катаной.</p>
                         <div class="feature-button" onclick="showSection('ranks')">
+                            Изучить систему
+                        </div>
+                    </div>
+
+                    <div class="feature-card purple-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Система повышения для Мрака</h3>
+                        <p>Восхождение в тени: от низшего жнеца до владыки тьмы. Система, где сила измеряется не только в бою, но и в искусстве пыток, грабежах и манипуляциях.</p>
+                        <div class="feature-button" onclick="showSection('ranks2')">
                             Изучить систему
                         </div>
                     </div>
@@ -1301,8 +1575,8 @@
                         <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h3>Состав Полумесяцев</h3>
-                        <p>Демоны, следующие пути чести даже после отречения от человечности. Полумесяцы, сохранившие кодекс чести и дисциплину.</p>
+                        <h3>Состав Шиногенкай/Мрак</h3>
+                        <p>Демоны, следующие пути чести даже после отречения от человечности, сохранившие кодекс чести и дисциплину.</p>
                         <div class="feature-button" onclick="showSection('team')">
                             Узнать состав
                         </div>
@@ -1321,107 +1595,140 @@
                 </div>
             </div>
 
-            <!-- Система повышения -->
+            <!-- Система повышения Шиногенкая-->
             <div id="ranks" class="section">
                 <div class="page-header">
                     <h1>СИСТЕМА ПОВЫШЕНИЯ</h1>
                     <p style="color: var(--light); max-width: 600px; margin: 0 auto; font-size: 1.2em;">
-                        От Keykon до Tsukomon - для отряда Полумесяца
+                        От Weak Demon до Baka-kujira - для отряда Шиногенкая 
                     </p>
                 </div>
-
+<!-- 1-2 -->
                 <div class="ranks-grid">
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-moon"></i></div>
-                        <h3 class="rank-title">Keykon → Hofuma</h3>
+                        <h3 class="rank-title">Weak Demon → Oni</h3>
                         <div class="rank-points">10 баллов</div>
-                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 2 дня</div>
+                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 1 дня</div>
                         <div class="progress-container">
                             <div class="progress-bar" style="width: 12.5%"></div>
                         </div>
-                        <p>Начальный этап становления бойца отряда. Освоение базовых навыков и тактик.</p>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Заточка катаны с помощью техник магии крови (РП: 20 действий с успешной отыгровкой try).<br> 
+        2. Прохождение обучения техник крови.<br>
+        3. Прохождение практики использования техник магии крови.<br></p>
                     </div>
-                    
+<!-- 2-3 -->                    
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-leaf"></i></div>
-                        <h3 class="rank-title">Hofuma → Chisuma</h3>
+                        <h3 class="rank-title">Oni → Ronin</h3>
                         <div class="rank-points">15 баллов</div>
-                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 2 дня</div>
+                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 1 дня</div>
                         <div class="progress-container">
                             <div class="progress-bar" style="width: 25%"></div>
                         </div>
-                        <p>Первое серьезное повышение в карьере. Расширение ответственности и обязанностей.</p>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Патруль территории - Мертвый лес (30 минут)<br>
+        2. Прохождении тренировки от Главы/Приемника отряда.<br>
+        3. Прохождение аттестации знаний клятвы крови (Онлайн тест).<br></p>
                     </div>
-                    
+<!-- 3-4 -->                    
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-gem"></i></div>
-                        <h3 class="rank-title">Chisuma → Chikuma</h3>
+                        <h3 class="rank-title">Ronin → Yuri</h3>
                         <div class="rank-points">20 баллов</div>
                         <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 2 дня</div>
                         <div class="progress-container">
                             <div class="progress-bar" style="width: 37.5%"></div>
                         </div>
-                        <p>Укрепление позиций в отряде. Начало руководства младшими бойцами.</p>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Патруль территории - Деревня Асакуса (30 минут)<br>
+        2. Прохождение сдерживания крови (Панкун) - Поднять себе уровень на один (Скриншот начального уровня и конечного).<br>
+        3. Поглатить 5 тел.<br>
+        4. Изготовление алхимии: Розовый химикат, голубой химикат.<br></p>
                     </div>
-                    
+ <!-- 4-5 -->                   
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3 class="rank-title">Chikuma → Asakuma</h3>
+                        <h3 class="rank-title">Yuri → Hitobashira</h3>
                         <div class="rank-points">25 баллов</div>
                         <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 2 дня</div>
                         <div class="progress-container">
                             <div class="progress-bar" style="width: 50%"></div>
                         </div>
-                        <p>Приближение к старшому составу. Ответственность за тактические операции.</p>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Прохождение сдерживания крови (Панкун) - поднять себе уровень на два (Скриншот начального уровня и конечного).<br>
+        2. Сразится в самурайской дуэле с членом отряда/фракции (РП: 20 действий).<br>
+        3. Поглатить 5 тел.<br>
+        4. Изготовление алхимии: Красный химикат, жёлтый химикат.<br></p>
                     </div>
-                    
+<!-- 5-6 -->                     
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-star"></i></div>
-                        <h3 class="rank-title">Asakuma → Hobura</h3>
+                        <h3 class="rank-title">Hitobashira → Yukai</h3>
                         <div class="rank-points">30 баллов</div>
-                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 3 дня</div>
+                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 2 дня</div>
                         <div class="progress-container">
                             <div class="progress-bar" style="width: 62.5%"></div>
                         </div>
-                        <p>Становление опытным бойцом. Руководство небольшими группами.</p>
-                    </div>
-            
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Патруль территории - Центральная деревня (30 минут).<br>
+        2. Сразится в дуэле с истребителем (РП: Выйграть в 3-х try).<br>
+        3. Разузнать об штабе истребителей (РП: 20 действий).<br>
+        4. Изготовление алхимии: Кровавое зелье, зелёный химикат.<br></p>
+    </div>
+<!-- 6-7 -->             
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-crown"></i></div>
-                        <h3 class="rank-title">Hobura → Shateigashira</h3>
+                        <h3 class="rank-title">Yukai → Nei-dzidai</h3>
                         <div class="rank-points">35 баллов</div>
                         <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 3 дня</div>
                         <div class="progress-container">
                             <div class="progress-bar" style="width: 75%"></div>
                         </div>
-                        <p>Вход в командный состав. Ответственность за стратегические решения.</p>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Прохождение сдерживания крови (Панкун) - поднять себе уровень на три (Скриншот начального уровня и конечного).<br>
+        2. Поучаствовать в вылазке с отрядом/группой.<br>
+        3. Помешать истребителям захват территории (5 раз).<br>
+        4. Получить поручение от Высшей/Низшей луны.<br>
+        5. Изготовление алхимии: Фиолетовый химикат, серый химикат.<br></p>
                     </div>
-
+<!-- 7-8 --> 
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-chess-queen"></i></div>
-                        <h3 class="rank-title">Shateigashira → Wakagashira</h3>
+                        <h3 class="rank-title">Nei-dzidai → Imory</h3>
                         <div class="rank-points">40 баллов</div>
                         <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 3 дня</div>
                         <div class="progress-container">
                             <div class="progress-bar" style="width: 87.5%"></div>
                         </div>
-                        <p>Становление в высший командный состав</p>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Патруль территории - Центральная локация (30 минут).<br>
+        2. Сразится в дуэле с истребителем (РП: Выйграть в 3-х try).<br>
+        3. Помешать истребителям захват территории (5 раз).<br>
+        4. Сразится в самурайской дуэле с членом отряда/фракции (РП: 20 действий).<br>
+        5. Вызвать на дуэль крови демона равного тебе по силе.<br></p>
                     </div>
-
+<!-- 8-9 --> 
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-sun"></i></div>
-                        <h3 class="rank-title">Shateigashira → Tsukomon</h3>
+                        <h3 class="rank-title">Imory → Baka-kujira</h3>
                         <div class="rank-points">45 баллов</div>
                         <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 3 дня</div>
                         <div class="progress-container">
                             <div class="progress-bar" style="width: 100%"></div>
                         </div>
-                        <p>Вершина карьерной лестницы отряда.</p>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Пройти особый ритуал крови под наблюдением Высшей Луны или Главы Отряда (РП: 30 действий с фокусом на контроль и волю).<br>
+        2. Организовать и успешно провести вылазку отряда на территорию истребителей (РП-событие с участием не менее 3 членов отряда).<br>
+        3. Обучить одного демона ранга Ronin или ниже любой технике крови или алхимическому рецепту (подтверждение от ученика).<br>
+        4.  Победить в дуэли демона ранга Nei-dzidai или выше (РП: победить в 3-х try, либо по решению Главы/Высшей Луны).<br></p>
                     </div>
-                </div>
+                    </div>
+
 
                 <div class="page-header" style="margin-top: 80px;">
-                    <h1>СИСТЕМА ПОВЫШЕНИЯ В ИЕРАРХИИ ПОЛУМЕСЯЦЕВ</h1>
+                    <h1>СИСТЕМА ПОВЫШЕНИЯ В ИЕРАРХИИ ШИНОГЕНКАЯ</h1>
                     <p style="color: var(--light); max-width: 600px; margin: 0 auto; font-size: 1.2em;">
                         От Lower seirai до Moon Sensei
                     </p>
@@ -1430,9 +1737,9 @@
                 <div class="ranks-grid">
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-moon"></i></div>
-                        <h3 class="rank-title">Lower seirai → Upper Kogetsu</h3>
-                        <div class="rank-points">По обзвону</div>
-                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 3 дня</div>
+                        <h3 class="rank-title">Дикий демон → Демон Шиногенкай</h3>
+                        <div class="rank-points">По набору</div>
+                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 2 дня</div>
                         <div class="progress-container">
                             <div class="progress-bar" style="width: 50%"></div>
                         </div>
@@ -1440,8 +1747,8 @@
                     
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-sun"></i></div>
-                        <h3 class="rank-title">Upper Kogetsu → Moon Sensei</h3>
-                        <div class="rank-points">По набору</div>
+                        <h3 class="rank-title">Демон Шиногенкай → Заместитель/Командир отряда</h3>
+                        <div class="rank-points">По обзвону/набору</div>
                         <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 7 дней</div>
                         <div class="progress-container">
                             <div class="progress-bar" style="width: 100%"></div>
@@ -1455,14 +1762,14 @@
                     <div class="activities-grid">
                         <div class="activity-item">
                             <div class="activity-name"><i class="fas fa-skull"></i> Убийство истребителя</div>
-                            <div class="activity-points">1 балл</div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-name"><i class="fas fa-monument"></i> Убийство столпа</div>
                             <div class="activity-points">2 балла</div>
                         </div>
                         <div class="activity-item">
-                            <div class="activity-name"><i class="fas fa-flag"></i> Захват точек (От 5)</div>
+                            <div class="activity-name"><i class="fas fa-monument"></i> Убийство столпа</div>
+                            <div class="activity-points">5 баллов</div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-name"><i class="fas fa-flag"></i> Захват точек</div>
                             <div class="activity-points">5 баллов</div>
                         </div>
                         <div class="activity-item">
@@ -1470,7 +1777,7 @@
                             <div class="activity-points">5 баллов</div>
                         </div>
                         <div class="activity-item">
-                            <div class="activity-name"><i class="fas fa-users"></i> Участие в МП отряда</div>
+                            <div class="activity-name"><i class="fas fa-users"></i> Обучение скитальца/демона</div>
                             <div class="activity-points">5 баллов</div>
                         </div>
                         <div class="activity-item">
@@ -1491,11 +1798,11 @@
                         </div>
                         <div class="activity-item">
                             <div class="activity-name"><i class="fas fa-tasks"></i> Поручения от Лун (низшая)</div>
-                            <div class="activity-points">10 баллов</div>
+                            <div class="activity-points">5 баллов</div>
                         </div>
                         <div class="activity-item">
                             <div class="activity-name"><i class="fas fa-tasks"></i> Поручения от Лун (высшая)</div>
-                            <div class="activity-points">10 баллов</div>
+                            <div class="activity-points">5 баллов</div>
                         </div>
                         <div class="activity-item">
                             <div class="activity-name"><i class="fas fa-user-tie"></i> Поручения от CMD, D.CMD</div>
@@ -1509,8 +1816,7 @@
                 </div>
 
                 <div class="honors-section">
-                    <h2 class="section-title">Почтения</h2>
-                    
+                    <h2 class="section-title">Рекомендации - очки крови</h2>
                     <div class="honors-grid">
                         <div class="honor-card">
                             <div class="honor-title">1 Степень</div>
@@ -1543,6 +1849,119 @@
                             <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката на выдачу: 7 дней</div>
                             <div class="rank-cooldown"><i class="fas fa-hourglass-half"></i> Время отката на использование: 7 дней</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Система повышения Мрака-->
+            <div id="ranks2" class="section">
+                <div class="page-header">
+                    <h1>СИСТЕМА ПОВЫШЕНИЯ</h1>
+                    <p style="color: var(--light); max-width: 600px; margin: 0 auto; font-size: 1.2em;">
+                        От Weak Demon до Baka-kujira - для отряда Мрака  
+                    </p>
+                </div>
+
+                <div class="ranks-grid">
+<!-- 2-3 -->                    
+                    <div class="rank-card">
+                        <div class="rank-icon"><i class="fas fa-skull-crossbones"></i></div>
+                        <h3 class="rank-title">Oni → Ronin</h3>
+                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 1 дня</div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 25%"></div>
+                        </div>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1.Принести две катаны истребителя.<br> 
+        2.Заставить низшую луну Мрака провести обряд получения катаны (рп моменты).<br>
+        3.Как будут сделаны все пункты - попроси крови у любой луны Мрака.<br></p>
+                    </div>
+<!-- 3-4 -->                    
+                    <div class="rank-card">
+                        <div class="rank-icon"><i class="fas fa-skull-crossbones"></i></div>
+                        <h3 class="rank-title">Ronin → Yuri</h3>
+                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 2 дня</div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 37.5%"></div>
+                        </div>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1.Попросить у низшей луны Мрака провести тебе тренировку.<br>
+        2.Выполни одно задание у любой высшей луны не из Мрака.<br>
+        3.Раздобудь 100.000 йен и отдай их высшей луне Мрака (по рп собирать деньги).<br>
+        4.Как будут сделаны все пункты - попроси крови у любой луны Мрака<br></p>
+                    </div>
+ <!-- 4-5 -->                   
+                    <div class="rank-card">
+                        <div class="rank-icon"><i class="fas fa-skull-crossbones"></i></div>
+                        <h3 class="rank-title">Yuri → Hitobashira</h3>
+                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 2 дня</div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 50%"></div>
+                        </div>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. 1.Брось вызов любой луне Мрака и покажи, на что ты способен (снести хотя бы 50% хп).<br>
+        2. Выполни задание от одной из шести высших лун.<br>
+        3. Попроси у Господина хотя бы капельку крови, чтобы получить возможность использовать катану в сражениях.<br>
+        4. Научись материализовать свою катану из плоти (15 рп действий).<br>
+        5. Как будут сделаны все пункты - попроси крови у любой луны Мрака.<br></p>
+                    </div>
+<!-- 5-6 -->                     
+                    <div class="rank-card">
+                        <div class="rank-icon"><i class="fas fa-skull-crossbones"></i></div>
+                        <h3 class="rank-title">Hitobashira → Yukai</h3>
+                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 2 дня</div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 62.5%"></div>
+                        </div>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Отряду Шиногенкая требуется помощь. Попроси у любого члена отряда Шиногенкай задание и выполни его.<br>
+        2. Тебе нужно научиться допрашивать людей. Похить истребителя и добейся того, чтобы он тебе рассказал ценную информацию.<br>
+        3. Твой клинок до сих пор слаб. Убей пять истребителей, чтобы клинок стал острее.<br>
+        4. Как будут сделаны все пункты - попроси крови у любой луны Мрака.<br></p>
+    </div>
+<!-- 6-7 -->             
+                    <div class="rank-card">
+                        <div class="rank-icon"><i class="fas fa-skull-crossbones"></i></div>
+                        <h3 class="rank-title">Yukai → Nei-dzidai</h3>
+                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 3 дня</div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 75%"></div>
+                        </div>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Используй полученные навыки по пыткат Истребителей и получи больше ценной информации об их структуре.<br>
+        2. Битвы не терпят слабых. Отточи все способности магии крови до "идеала" (5 рп действий на каждую способность).<br>
+        3. Выполни задание от любой луны Атомика.<br>
+        4. Не забывай, что твой клинок становится острее после каждого убийства. Отсеки голову пятерым истребителям.<br>
+        5. Как будут сделаны все пункты - попроси крови у любой луны Мрака.<br></p>
+                    </div>
+<!-- 7-8 --> 
+                    <div class="rank-card">
+                        <div class="rank-icon"><i class="fas fa-skull-crossbones"></i></div>
+                        <h3 class="rank-title">Nei-dzidai → Imory</h3>
+                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 3 дня</div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 87.5%"></div>
+                        </div>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Сразись с любой луной Мрака, чтобы показать результаты своих трудов и получу похвалу (снести хотя бы 50% хп).<br>
+        2. Принеси десять голов истребителей высшей луне Мрака.<br>
+        3. Не забывай, что твой клинок становится острее после каждого убийства. Отсеки голову десятерым истребителям.<br>
+        4. Как будут сделаны все пункты - попроси крови у любой луны Мрака.<br></p>
+                    </div>
+<!-- 8-9 --> 
+                    <div class="rank-card">
+                        <div class="rank-icon"><i class="fas fa-skull-crossbones"></i></div>
+                        <h3 class="rank-title">Imory → Baka-kujira</h3>
+                        <div class="rank-cooldown"><i class="fas fa-clock"></i> Время отката 3 дня</div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                        <p><strong style="font-size: 1.15em">Основные критерии для повышения:</strong> <br>
+        1. Отследи любого столпа, а после постарайся убить его (рп файт, где ты должен оставить хотя бы 50% от хп столпа).<br>
+        2. Сразись с любой луной Мрака и нанеси серьезные повреждения (убить в механе).<br>
+        3. Убей три отряда истребителей (3+ убийства с одного файта).<br>
+        4. Для получения одобрения на получение силы, докажи высшей луне Мрака свою полезность (выполнить задание).
+        5. Как будут сделаны все пункты - попроси крови у любой луны Мрака.<br></p>
                     </div>
                 </div>
             </div>
@@ -1585,7 +2004,7 @@
                 <div class="page-header" style="margin-top: 80px;">
                     <h2 class="category-title">Онлайн мечников</h2>
                 </div>
-                
+<!-- Онлайн Шиногенкай -->            
                 <div class="ranks-grid" style="margin-top: 40px;">
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-clock"></i></div>
@@ -1597,20 +2016,30 @@
                     
                     <div class="rank-card">
                         <div class="rank-icon"><i class="fas fa-clock"></i></div>
-                        <h3 class="rank-title">Средне-Старший Состав</h3>
-                        <div class="rank-points">180 минут в неделю</div>
-                        <div class="rank-cooldown"><i class="fas fa-user"></i> Лунные Мечники</div>
-                        <p>Основные бойцы отряда, выполняющие боевые задачи и тренировки.</p>
-                    </div>
-                    
-                    <div class="rank-card">
-                        <div class="rank-icon"><i class="fas fa-clock"></i></div>
                         <h3 class="rank-title">Основной Состав</h3>
                         <div class="rank-points">180 минут в неделю</div>
-                        <div class="rank-cooldown"><i class="fas fa-user"></i> Лунные Аколиты</div>
+                        <div class="rank-cooldown"><i class="fas fa-user"></i> Демон шиногенкай</div>
                         <p>Вновь прибывшие члены отряда, проходящие обучение и адаптацию.</p>
                     </div>
                 </div>
+<!-- Онлайн Мрак -->  
+<div class="ranks-grid" style="margin-top: 40px;">
+    <div class="rank-card purple-card">
+        <div class="rank-icon"><i class="fas fa-clock"></i></div>
+        <h3 class="rank-title">Старший состав</h3>
+        <div class="rank-points">90 минут в три дня</div>
+        <div class="rank-cooldown"><i class="fas fa-user"></i> Командир и заместитель командира отряда</div>
+        <p>Обязаны поддерживать боеготовность отряда, проводить тренировки и координировать операции в Тёмных просторах.</p>
+    </div>
+    
+    <div class="rank-card purple-card">
+        <div class="rank-icon"><i class="fas fa-clock"></i></div>
+        <h3 class="rank-title">Основной Состав</h3>
+        <div class="rank-points">60 минут в три дня</div>
+        <div class="rank-cooldown"><i class="fas fa-user"></i> Жнец мрака</div>
+        <p>Бойцы, освоившие основы работы с теневыми энергиями и участвующие в патрулировании ключевых аномальных зон.</p>
+    </div>
+</div>
 
                 <div class="page-header" style="margin-top: 80px;">
                     <h2 class="category-title">Система отпусков</h2>
@@ -1671,7 +2100,7 @@
             <!-- Состав -->
             <div id="team" class="section">
                 <div class="page-header">
-                    <h1>СОСТАВ ОТРЯДА ПОЛУМЕСЯЦЕВ</h1>
+                    <h1>СОСТАВ ОТРЯДА ШИНОГЕНКАЙ-МРАКА</h1>
                     <p style="color: var(--light); max-width: 600px; margin: 0 auto; font-size: 1.2em;">
                         Иерархическая структура отряда, включающая командиров, офицеров и бойцов
                     </p>
@@ -1681,72 +2110,61 @@
                 <div class="team-structure">
                     <!-- Командный состав Мечников -->
                     <div class="team-category">
-                        <h2 class="category-title">Командный состав Полумесяц</h2>
+                        <h2 class="category-title">Командный состав Шиногенкай-Мрака</h2>
                         <div class="members-grid">
                             <div class="member-card">
                                 <div class="member-avatar"><i class="fas fa-moon"></i></div>
                                 <div class="member-rank">1-я Высшая Луна</div>
                                 <div class="member-name">Kokushibo</div>
-                                <div class="member-role">Глава отряда полумесяцев<br>Высшее руководство</div>
+                                <div class="member-role">Глава отряда<br>Высшее руководство</div>
                             </div>
                             
-                            <div class="member-card">
-                                <div class="member-avatar"><i class="fas fa-shield-alt"></i></div>
-                                <div class="member-rank">4-я Высшая Луна</div>
-                                <div class="member-name">Nakime</div>
-                                <div class="member-role">Заместитель главы отряда полумесяцев<br>Высшее руководство</div>
+                            <div class="member-card vacant">
+                                <div class="member-avatar"><i class="fas fa-bolt"></i></div>
+                                <div class="member-rank">Приемник Кокушибо</div>
+                                <div class="member-name">Kaigaku</div>
+                                <div class="member-role">Заместитель главы отряда<br>Высшее руководство</div>
+                            </div> 
+
+                            <div class="member-card purple-card">
+                                <div class="member-avatar"><i class="fas fa-tornado"></i></div>
+                                <div class="member-rank">Величайший демон мрака</div>
+                                <div class="member-name">Yae Danteshi</div>
+                                <div class="member-role">Заместитель главы отряда<br>Руководство отряда Мрака</div>
                             </div>  
                         </div>
                     </div>
 
                     <!-- Старший состав -->
                     <div class="team-category">
-                        <h2 class="category-title">Старший состав</h2>
+                        <h2 class="category-title">Старший состав Шиногенкай-Мрака</h2>
                         <div class="members-grid">
-                            <div class="member-card">
+                            <div class="member-card vacant">
                                 <div class="member-avatar"><i class="fas fa-moon"></i></div>
-                                <div class="member-rank">Лунный Сенсей - Командир отряда</div>
-                                <div class="member-name">Джиро Гусато</div>
-                                <div class="member-role">Chikuma[6]</div>
+                                <div class="member-rank">Командир отряда - Шиногенкай</div>
+                                <div class="member-name">[Вакантно]</div>
+                                <div class="member-role">Свободная позиция</div>
                             </div>
                             
-                            <div class="member-card">
-                                <div class="member-avatar"><i class="fas fa-moon"></i></div>
-                                <div class="member-rank">Лунный Сенсей - Заместитель командира</div>
-                                <div class="member-name">Egomu Vulen</div>
-                                <div class="member-role">Hofuma[4]</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Средне-Старший Состав -->
-                    <div class="team-category">
-                        <h2 class="category-title">Средне-Старший Состав</h2>
-                        <div class="members-grid">
-                            <div class="member-card">
-                                <div class="member-avatar"><i class="fas fa-user"></i></div>
-                                <div class="member-rank">Лунный Мечник</div>
-                                <div class="member-name">Urumaq Tatsuhiro</div>
-                                <div class="member-role">Hofuma[4]</div>
-                            </div>
-
-                            <div class="member-card">
-                                <div class="member-avatar"><i class="fas fa-user"></i></div>
-                                <div class="member-rank">Лунный Мечник</div>
-                                <div class="member-name">Hakari Hanemiya</div>
-                                <div class="member-role">Shiko[12]</div>
-                            </div>
-
-                            <div class="member-card">
-                                <div class="member-avatar"><i class="fas fa-user"></i></div>
-                                <div class="member-rank">Лунный Мечник</div>
-                                <div class="member-name">Кохаку Ечида</div>
-                                <div class="member-role">Shiko[12]</div>
-                            </div>
-
                             <div class="member-card vacant">
-                                <div class="member-avatar"><i class="fas fa-user"></i></div>
-                                <div class="member-rank">Лунный Мечник</div>
+                                <div class="member-avatar"><i class="fas fa-moon"></i></div>
+                                <div class="member-rank">Заместитель командира - Шиногенкай</div>
+                                <div class="member-name">[Вакантно]</div>
+                                <div class="member-role">Свободная позиция</div>
+                            </div>
+
+                            <div class="member-card purple-card">
+                                <div class="member-avatar">
+                                    <i class="fas fa-skull"></i>
+                                     <i class="fas fa-tint blood-tear"></i></div>
+                                <div class="member-rank">Командир отряда - Нищая луна мрака</div>
+                                <div class="member-name">Глебискус Ямато</div>
+                                <div class="member-role">Lower Moon[10]</div>
+                            </div>
+                            
+                            <div class="member-card purple-card vacant">
+                                <div class="member-avatar"><i class="fas fa-skull"></i></div>
+                                <div class="member-rank">Заместитель командира - Мрака</div>
                                 <div class="member-name">[Вакантно]</div>
                                 <div class="member-role">Свободная позиция</div>
                             </div>
@@ -1755,39 +2173,61 @@
                     
                     <!-- Основной состав -->
                     <div class="team-category">
-                        <h2 class="category-title">Основной состав</h2>
+                        <h2 class="category-title">Основной состав Шиногенкай-Мрака</h2>
                         <div class="members-grid">
                             <div class="member-card">
                                 <div class="member-avatar"><i class="fas fa-user"></i></div>
-                                <div class="member-rank">Лунный Аколит</div>
-                                <div class="member-name">Ямото Шинсу</div>
-                                <div class="member-role">Demon[2]</div>
+                                <div class="member-rank">Демон шиногенкай</div>
+                                <div class="member-name">Colombina Danteshi</div>
+                                <div class="member-role">Ronin[3]</div>
                             </div>
                             
-                            <div class="member-card vacant">
+                            <div class="member-card">
                                 <div class="member-avatar"><i class="fas fa-user"></i></div>
-                                <div class="member-rank">Лунный Аколит</div>
+                                <div class="member-rank">Демон шиногенкай</div>
+                                <div class="member-name">Akio Akihiko</div>
+                                <div class="member-role">Weak demon[1]</div>
+                            </div>
+
+                            <div class="member-card">
+                                <div class="member-avatar"><i class="fas fa-user"></i></div>
+                                <div class="member-rank">Демон шиногенкай</div>
+                                <div class="member-name">Kemi Totogu</div>
+                                <div class="member-role">Yuri[4]</div>
+                            </div>
+
+                            <div class="member-card">
+                                <div class="member-avatar"><i class="fas fa-user"></i></div>
+                                <div class="member-rank">Демон шиногенкай</div>
+                                <div class="member-name">Kou Jin</div>
+                                <div class="member-role">Weak demon[1]</div>
+                            </div>
+                            
+                            <div class="member-card">
+                                <div class="member-avatar"><i class="fas fa-user"></i></div>
+                                <div class="member-rank">Демон шиногенкай</div>
+                                <div class="member-name">Minato Ishikawa</div>
+                                <div class="member-role">Weak demon[1]</div>
+                            </div>
+
+
+                            <div class="member-card purple-card">
+                                <div class="member-avatar"><i class="fas fa-user"></i></div>
+                                <div class="member-rank">Низший жнец мрака</div>
+                                <div class="member-name">Макиро Кириёши</div>
+                                <div class="member-role">Oni[2]</div>
+                            </div>
+
+                            <div class="member-card purple-card vacant">
+                                <div class="member-avatar"><i class="fas fa-user"></i></div>
+                                <div class="member-rank">Низший жнец мрака</div>
                                 <div class="member-name">[Вакантно]</div>
                                 <div class="member-role">Свободная позиция</div>
                             </div>
 
-                            <div class="member-card vacant">
+                            <div class="member-card purple-card vacant">
                                 <div class="member-avatar"><i class="fas fa-user"></i></div>
-                                <div class="member-rank">Лунный Аколит</div>
-                                <div class="member-name">[Вакантно]</div>
-                                <div class="member-role">Свободная позиция</div>
-                            </div>
-
-                            <div class="member-card vacant">
-                                <div class="member-avatar"><i class="fas fa-user"></i></div>
-                                <div class="member-rank">Лунный Аколит</div>
-                                <div class="member-name">[Вакантно]</div>
-                                <div class="member-role">Свободная позиция</div>
-                            </div>
-                            
-                            <div class="member-card vacant">
-                                <div class="member-avatar"><i class="fas fa-user"></i></div>
-                                <div class="member-rank">Лунный Аколит</div>
+                                <div class="member-rank">Низший жнец мрака</div>
                                 <div class="member-name">[Вакантно]</div>
                                 <div class="member-role">Свободная позиция</div>
                             </div>
@@ -1801,7 +2241,7 @@
                 <div class="page-header">
                     <h1>СОБЫТИЯ</h1>
                     <p style="color: var(--light); max-width: 600px; margin: 0 auto; font-size: 1.2em;">
-                        Перечень событий для состава полумесяцев
+                        Перечень событий для состава шиногенкай и мрака
                     </p>
                 </div>
                 
@@ -1838,24 +2278,24 @@
                     <div class="service-header">
                         <h2>Лунное собрание</h2>
                         <p style="color: var(--light); max-width: 800px; margin: 0 auto;">
-                            Тайный ритуал отряда Полумесяцев, где воины признаются в своих грехах ночи
+                            Тайный ритуал, где воины признаются в своих грехах ночи.
                         </p>
                     </div>
                     
                     <div class="service-content">
                         <div class="service-description">
                             <h3>Описание события</h3>
-                            <p>Лунное собрание - это закрытый ритуал отряда Полумесяцев, проводимый под покровом темноты в ночь полнолуния. Во время этого события члены отряда собираются в святилище и по очереди признаются в своих «грехах ночи» - ошибках, провалах и неудачах, совершенных за прошедший цикл луны.</p>
+                            <p>Лунное собрание - это закрытый ритуал, проводимый под покровом темноты в ночь полнолуния. Во время этого события члены отряда собираются в святилище и по очереди признаются в своих «грехах ночи» - ошибках, провалах и неудачах, совершенных за прошедший цикл луны.</p>
                             
                             <div class="service-details">
                                 <div class="service-detail-card">
                                     <h4><i class="fas fa-calendar"></i> Расписание</h4>
-                                    <p>Проводится по усмотрению высшей луны. Начало в 19:00</p>
+                                    <p>Проводится по усмотрению высшей луны. Начало в 18:00</p>
                                 </div>
                                 
                                 <div class="service-detail-card">
                                     <h4><i class="fas fa-users"></i> Участники</h4>
-                                    <p>Только члены отряда Полумесяцев</p>
+                                    <p>Только члены отряда Шиногенкая и Мрака</p>
                                 </div>
                                 
                                 <div class="service-detail-card">
@@ -1892,7 +2332,7 @@
 
                 <div id="moon-ring-trial" class="service-section">
                     <div class="service-header">
-                        <h2>Испытание лунного ринга ЗАМОРОЖЕНО</h2>
+                        <h2>Испытание лунного ринга</h2>
                         <p style="color: var(--light); max-width: 800px; margin: 0 auto;">
                             Боевое испытание, определяющее истинный путь силы и чести
                         </p>
@@ -1911,7 +2351,7 @@
                                 
                                 <div class="service-detail-card">
                                     <h4><i class="fas fa-users"></i> Участники</h4>
-                                    <p>Добровольцы из числа лунных мечников и аколитов</p>
+                                    <p>Добровольцы из отрядов Raiden/Shinogenkai/Reapers</p>
                                 </div>
                                 
                                 <div class="service-detail-card">
@@ -1949,7 +2389,7 @@
 
                 <div id="blood-hunt" class="service-section">
                     <div class="service-header">
-                        <h2>Кровавая охота ЗАМОРОЖЕНО</h2>
+                        <h2>Кровавая охота</h2>
                         <p style="color: var(--light); max-width: 800px; margin: 0 auto;">
                             Сезонное испытание на выживание в темных лесах с реальной опасностью
                         </p>
@@ -1993,7 +2433,7 @@
                                 <div class="service-detail-card">
                                     <h4><i class="fas fa-map"></i> Зона охоты</h4>
                                     <ul class="rule-list">
-                                        <li>Запретный лес (северо-западные территории)</li>
+                                        <li>Запретный лес (Ивент карта)</li>
                                         <li>3 уровня опасности</li>
                                         <li>5 точек контроля с припасами</li>
                                         <li>2 точки эвакуации</li>
@@ -2030,7 +2470,7 @@
         </div>
 
         <div class="footer">
-            <p>© 2025 Отряд Полумесяц | s5.yufu.su:27017</p>
+            <p>© 2026 Отряд Шиногенкай / Мрак | kasty.su:27027</p>
             <p style="margin-top: 10px; font-size: 0.9em;">Сила • Тайна • Дисциплина</p>
         </div>
     </div>
@@ -2412,8 +2852,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
